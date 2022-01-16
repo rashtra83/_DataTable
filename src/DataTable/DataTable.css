@@ -1,0 +1,40 @@
+body {
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  padding-top: 15px;
+}
+
+.header__left {
+  padding-left: 5%;
+  padding-right: 10%;
+  width: 60%;
+}
+
+.header__right {
+  width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__left {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .header__right {
+    text-align: center;
+    width: 100%;
+  }
+}

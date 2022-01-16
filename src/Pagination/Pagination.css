@@ -1,0 +1,12 @@
+.pagination {
+  float: right;
+  padding-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .pagination {
+    padding: 0px 0px 0px 0px;
+    float: none;
+    justify-content: center;
+  }
+}

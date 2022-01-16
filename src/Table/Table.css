@@ -1,0 +1,87 @@
+.dataTable {
+  width: 98%;
+  border: 1px solid rgb(214, 208, 208);
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 5px 1% 10px 1%;
+}
+
+.dataTable__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.dataTable tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+.dataTable th {
+  background-color: #0d6efd;
+  padding: 15px 15px 15px 15px;
+  color: white;
+  text-align: center;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dataTable td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+thead {
+  display: table-header-group;
+}
+
+.dataTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+  .dataTable {
+    border: 0;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  th {
+    display: grid;
+  }
+
+  .dataTable tr {
+    border-color: white;
+    background-color: white;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .dataTable td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .dataTable td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .dataTable td:last-child {
+    border-bottom: 0;
+  }
+
+  .dataTable tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  .dataTable tr:nth-child(even) {
+    background-color: white;
+  }
+}
